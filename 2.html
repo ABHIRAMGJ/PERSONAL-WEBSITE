@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhiram | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; background: #0f172a; color: white; overflow-x: hidden; }
+    #bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #00CFFF; box-shadow: 0 0 25px cyan; }
+    .text-gradient { background: linear-gradient(90deg,#00CFFF,#8A2BE2,#FF0080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-title { text-align:center; font-size:2.5rem; margin-bottom:1.5rem; background:linear-gradient(to right,#00f2fe,#4facfe); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .skill-box, .project-card, .experience-card { padding: 20px; border-radius: 15px; background: rgba(255,255,255,0.08); transition: 0.5s; cursor: pointer; }
+    .skill-box:hover, .project-card:hover, .experience-card:hover { transform: scale(1.1) rotateY(10deg); box-shadow: 0 0 25px cyan; }
+    .social-icons a { font-size: 1.8rem; margin: 0 10px; color: white; transition: 0.3s; }
+    .social-icons a:hover { color: cyan; transform: scale(1.2); }
+    .cert-img { max-height: 250px; border-radius: 15px; box-shadow: 0 0 25px rgba(0,255,255,0.5); }
+  </style>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<!-- Hero Section -->
+<header class="hero">
+  <img src="mypho.jpg" alt="Profile" class="profile-img mb-3">
+  <h1 class="display-3 fw-bold text-gradient">Gummaraaju Jaswanth Abhiram</h1>
+  <h3 class="typing"></h3>
+  <div class="mt-3">
+    <a href="https://drive.google.com/file/d/1BvYRpotc4a8zWNM8oFXuU8p0Ydpf_Eyy/view?usp=drive_link" download class="btn btn-info btn-lg me-3">Download Resume</a>
+    <!-- New Contact Button -->
+    <a href="1.html" class="btn btn-primary btn-lg">Contact Me</a>
+  </div>
+  <div class="social-icons mt-4">
+    <a href="https://github.com/Jasabhiram" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/gummaraju-jaswanth-abhiram-50547b289" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:gjabhiram001@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</header>
+
+
+<!-- About -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">About Me</h2>
+  <p class="lead text-center">
+    Highly motivated B.Tech CSE student (CGPA 9.29). Skilled in Java,  SQL, HTML/CSS/JS, PYTHON 
+    with strong problem-solving ability and passion for technology.
+  </p>
+</section>
+
+<!-- Skills -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">Skills</h2>
+  <div class="row text-center g-4">
+    <div class="col-md-2 col-6"><div class="skill-box tilt">Java</div></div>
+    <div class="col-md-2 col-6"><div class="skill-box tilt">Python</div></div>
+    <div class="col-md-2 col-6"><div class="skill-box tilt">JavaScript</div></div>
+    <div class="col-md-2 col-6"><div class="skill-box tilt">SQL</div></div>
+    <div class="col-md-2 col-6"><div class="skill-box tilt">HTML & CSS</div></div>
+    <div class="col-md-2 col-6"><div class="skill-box tilt">DSA</div></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">Projects</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="project-card tilt">
+        <h5>Online Voting System</h5>
+        <p>Responsive platform with OTP authentication & result charts.</p>
+        <a href="https://drive.google.com/drive/folders/1oixlSVJEBHL7UbPVbNkc8VULxlhMaKEw?usp=sharing" class="btn btn-outline-info btn-sm">GOOGLE DRIVE</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="project-card tilt">
+        <h5>Weather App (Java)</h5>
+        <p>Fetches real-time weather data using REST API.</p>
+        <a href="https://github.com/Jasabhiram" class="btn btn-outline-info btn-sm">GITHUB</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">Experience</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="experience-card tilt">
+        <h5>Web Developer Intern</h5>
+        <p><b>SkillForge</b> | Jan 2024 – Feb 2024</p>
+        <p>Built and optimized responsive web apps with HTML, CSS, JS, and Bootstrap.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="experience-card tilt">
+        <h5>Frontend Developer</h5>
+        <p><b>Freelance Projects</b></p>
+        <p>Designed voting system and weather app with animations & APIs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">Certifications</h2>
+  <div id="certCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center">
+        <img src="WEB DEVELOPMENT.jpg" class="cert-img d-block mx-auto" alt="Cert 1">
+      </div>
+      <div class="carousel-item text-center">
+        <img src="java.png" class="cert-img d-block mx-auto" alt="Cert 2">
+      </div>
+      <div class="carousel-item text-center">
+        <img src="sql.png" class="cert-img d-block mx-auto" alt="Cert 3">
+      </div>
+      <div class="carousel-item text-center">
+        <img src="python.png" class="cert-img d-block mx-auto" alt="Cert 4">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Bootstrap JS (required for carousel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Contact CTA -->
+<section id="contact" class="container py-5 text-center" data-aos="fade-up">
+  <h2 class="mb-4">🚀 Let’s Work Together</h2>
+  <form class="p-4 rounded shadow-lg bg-dark text-light w-50 mx-auto">
+    <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+    <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+    <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+    <button class="btn btn-primary w-100">Send</button>
+  </form>
+</section>
+
+<script>
+AOS.init();
+
+// Typing Effect
+const typing = document.querySelector(".typing");
+const roles = ["Java Developer", "Web Developer", "Problem Solver"];
+let i = 0, j = 0, current = roles[0], deleting = false;
+function typeEffect() {
+  typing.innerHTML = current.slice(0, j) + "|";
+  if (!deleting && j < current.length) j++;
+  else if (deleting && j > 0) j--;
+  else { deleting = !deleting; if (!deleting) { i = (i + 1) % roles.length; current = roles[i]; } }
+  setTimeout(typeEffect, deleting ? 80 : 150);
+}
+typeEffect();
+
+// 3D Stars
+const canvas = document.getElementById("bg");
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+const geometry = new THREE.SphereGeometry(0.05, 16, 16);
+const material = new THREE.MeshBasicMaterial({ color: 0x00ffff });
+const stars = [];
+for(let i=0; i<300; i++){ const star = new THREE.Mesh(geometry, material); star.position.set((Math.random()-0.5)*100,(Math.random()-0.5)*100,(Math.random()-0.5)*100); scene.add(star); stars.push(star); }
+camera.position.z = 10;
+function animate() { requestAnimationFrame(animate); stars.forEach(star => { star.rotation.x += 0.01; }); renderer.render(scene, camera); }
+animate();
+
+// Tilt Effect
+document.querySelectorAll(".tilt").forEach(el => {
+  el.addEventListener("mousemove", e => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+    el.style.transform = `rotateY(${x/20}deg) rotateX(${-y/20}deg) scale(1.05)`;
+  });
+  el.addEventListener("mouseleave", () => { el.style.transform = "rotateY(0) rotateX(0) scale(1)"; });
+});
+</script>
+</body>
+</html>
